@@ -8,3 +8,5 @@ Similarly, renaming the `foo()` methods so they're all unique also avoids the cr
 It appears the issue is related to the ApiDetector not being able to distinguish between the versions of `foo()` which take a `Runnable` vs. an `RxGetter<T>` when you pass a method reference as an argument.
 
 To see the error, simply run `./gradlew lintDebug` from the command line.
+
+I filed https://issuetracker.google.com/issues/143971679 against Android Studio to track this issue.
